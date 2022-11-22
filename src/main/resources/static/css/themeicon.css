@@ -1,0 +1,46 @@
+/* Theme Icons */
+@font-face {
+    font-family: 'themeicon';
+    src: url('../fonts/theme-icons/themeicons.eot');
+    src: url('../fonts/theme-icons/themeicons.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/theme-icons/themeicons.woff') format('woff'),
+    url('../fonts/theme-icons/themeicons.ttf') format('truetype'),
+    url('../fonts/theme-icons/themeicons.svg#sociconregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="themeicon-"], [class*="themeicon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'themeicon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: flex;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.themeicon-phone:before {
+    content: "\e900";
+}
+.themeicon-mail:before {
+    content: "\e901";
+}
+.themeicon-marker:before {
+    content: "\e902";
+}
+.themeicon-play:before {
+    content: "\e903";
+}
+.themeicon-comments:before {
+    content: "\e904";
+}
+.themeicon-share:before {
+    content: "\e905";
+}
