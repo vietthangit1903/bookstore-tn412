@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html class="no-js">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="/fragments/header :: head"></head>
+
+<body th:replace="master :: content(~{ :: .content})">
+	<div class="content">
+		<section class="page_slider overflow-visible">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li class="cs cover-image text-center text-md-left">
+                        <img src="images/slide01.jpg" alt="img">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="intro_layers_wrapper">
+                                        <div class="img-layer animate" data-animation="fadeInLeft">
+                                            <img src="images/book.png" alt="img">
+                                        </div>
+                                        <div class="intro_layers">
+                                            <div class="intro_layer intro_feature_word"
+                                                 data-animation="fadeInRight">
+                                                <p>Make your book a bestseller</p>
+                                            </div>
+                                            <div class="intro_layer" data-animation="fadeInRight">
+                                                <h1>Landing page for your ebook</h1>
+                                            </div>
+                                            <div class="intro_layer" data-animation="fadeInRight">
+                                                <p>This should be used to tell a story and let your users know a
+                                                    little more about your product or service.</p>
+                                            </div>
+                                            <div class="intro_layer several-buttons" data-animation="fadeInUp">
+                                                <a href="shop-detail.html" class="btn btn-maincolor">Get free
+                                                    chapter 1</a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="author" class="ls s-overlay mobile-overlay s-py-90 s-py-xl-150 section-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="divider-xl-200"></div>
+                        <p class="mb-2 color-dark">Meet author</p>
+                        <h2 class="special-heading">
+                            <span>Christian J. Rein</span>
+                        </h2>
+                        <div class="divider-40"></div>
+                        <p class="excerpt">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                            nulla pariatur sint occaecat cupidatat
+                        </p>
+                        <div class="divider-40"></div>
+                        <p>
+                            Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Sed ut perspiciatis unde aperiam, eaque ipsa quae ab illo inventore.
+                        </p>
+                        <div class="divider-40"></div>
+                        <div class="columns-two">
+                            <a href="shop-detail.html" class="btn btn-maincolor">My books</a>
+                            <img src="images/signature.png" alt="img">
+                        </div>
+                        <div class="divider-xl-150"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="ls ms s-py-90 s-py-xl-160 c-gutter-100">
+            <div class="container">
+                <div class="row align-center">
+                    <div class="col-lg-6">
+                        <div class="video-shortcode">
+                            <img src="images/gallery-square/18.jpg" alt="img">
+                            <a href="#" class="photoswipe-link photoswipe-link-button" data-index="1"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="divider-60 divider-lg-0"></div>
+                        <h3 class="special-heading">
+                            <span>About LightBook </span>
+                        </h3>
+                        <div class="divider-40"></div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua uenim ad minim veniam quis nostrud
+                            exercitation ullamco laboris.
+                        </p>
+                        <div class="divider-40">
+                            <a href="shop.html" class="btn-with-line">Watch our presentation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-center">
+                    <div class="col-12">
+                        <div class="divider-80 divider-xl-120"></div>
+                    </div>
+                    <div class="col-lg-6 order-2 order-lg-1">
+                        <div class="divider-60 divider-lg-0"></div>
+                        <h3 class="special-heading">
+                            <span>Why people download this ebook</span>
+                        </h3>
+                        <div class="divider-40"></div>
+                        <ul class="list-styled">
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur
+                            </li>
+                            <li>
+                                Adipisicing elit, sed do eiusmod tempor incididunt
+                            </li>
+                            <li>
+                                Labore et dolore magna aliqua
+                            </li>
+                            <li>
+                                Uenim ad minim veniam quis nostrud exercitation ullamco
+                            </li>
+                            <li>
+                                Duis aute irure dolor in reprehenderit voluptate
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2">
+                        <div class="border-r-def overflow-hidden">
+                            <img src="images/gallery-square/19.jpg" alt="img">
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-center">
+                    <div class="col-12">
+                        <div class="divider-80 divider-xl-120"></div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="border-r-def overflow-hidden">
+                            <img src="images/gallery-square/20.jpg" alt="img">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="divider-60 divider-lg-0"></div>
+                        <h3 class="special-heading">
+                            <span>Join the community</span>
+                        </h3>
+                        <div class="divider-40"></div>
+                        <p>
+                            Subscribe to our newsletter to be always updated. We promise to keep your email in
+                            private and will never spam.
+                        </p>
+                        <div class="divider-40"></div>
+                        <div class="widget widget_mailchimp">
+
+                            <form class="signup" action="/">
+                                <label for="mailchimp_email">
+                                    <span class="screen-reader-text">Subscribe:</span>
+                                </label>
+
+                                <input id="mailchimp_email" name="email" type="email"
+                                       class="form-control mailchimp_email" placeholder="Email address">
+
+                                <button type="submit" class="search-submit">
+                                    <span class="screen-reader-text"><a href="author.html"></a></span>
+                                </button>
+                                <div class="response"></div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quotes" class="ds section-testimonials s-py-90 s-py-xl-150">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="owl-carousel owl-nav-bottom" data-responsive-lg="3" data-responsive-md="2"
+                             data-responsive-sm="1" data-responsive-xs="1" data-nav="true" data-margin="60"
+                             data-loop="true" data-autoplay="true">
+                            <div class="vertical-item quote-item">
+                                <div class="item-content text-center">
+                                    <h4 class="mb-3">
+                                        Claudia T. Taylor
+                                    </h4>
+                                    <p class="position">Paramedic</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua minim veniam.</p>
+                                </div>
+                            </div>
+                            <div class="vertical-item quote-item">
+                                <div class="item-content text-center">
+                                    <h4 class="mb-3">
+                                        Maxie R. Broussard
+                                    </h4>
+                                    <p class="position">EEO officer</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua minim veniam.</p>
+                                </div>
+                            </div>
+                            <div class="vertical-item quote-item">
+                                <div class="item-content text-center">
+                                    <h4 class="mb-3">
+                                        Sarah J. Adams
+                                    </h4>
+                                    <p class="position">Athletic trainer</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua minim veniam.</p>
+                                </div>
+                            </div>
+                            <div class="vertical-item quote-item">
+                                <div class="item-content text-center">
+                                    <h4 class="mb-3">
+                                        Timothy P. Alexander
+                                    </h4>
+                                    <p class="position">Teacher</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua minim veniam.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faqs" class="ls ms s-py-90 s-py-xl-150 c-gutter-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="special-heading">
+                            <span>Table of contents</span>
+                        </h2>
+                        <div class="divider-40"></div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div id="accordion01" role="tablist">
+                            <div class="card">
+                                <div class="card-header" role="tab" id="collapse01_header">
+                                    <h5>
+                                        <a class="collapsed" data-toggle="collapse" href="#collapse01"
+                                           aria-expanded="true" aria-controls="collapse01">
+                                            Chapter 1. Data science in a big data world
+                                        </a>
+                                    </h5>
+                                </div>
+
+                                <div id="collapse01" class="collapse" role="tabpanel"
+                                     aria-labelledby="collapse01_header" data-parent="#accordion01">
+                                    <div class="card-body">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" role="tab" id="collapse02_header">
+                                    <h5>
+                                        <a class="collapsed" data-toggle="collapse" href="#collapse02"
+                                           aria-expanded="false" aria-controls="collapse02">
+                                            Chapter 2. The data science process
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapse02" class="collapse" role="tabpanel"
+                                     aria-labelledby="collapse02_header" data-parent="#accordion01">
+                                    <div class="card-body">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" role="tab" id="collapse04_header">
+                                    <h5>
+                                        <a class="collapsed" data-toggle="collapse" href="#collapse04"
+                                           aria-expanded="false" aria-controls="collapse04">
+                                            Chapter 3. Machine learning
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapse04" class="collapse" role="tabpanel"
+                                     aria-labelledby="collapse04_header" data-parent="#accordion01">
+                                    <div class="card-body">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" role="tab" id="collapse05_header">
+                                    <h5>
+                                        <a class="collapsed" data-toggle="collapse" href="#collapse05"
+                                           aria-expanded="false" aria-controls="collapse05">
+                                            Chapter 4. Handling large data on a single computer
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapse05" class="collapse" role="tabpanel"
+                                     aria-labelledby="collapse05_header" data-parent="#accordion01">
+                                    <div class="card-body">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div id="accordion02" role="tablist">
+                            <div class="card">
+                                <div class="card-header" role="tab" id="collapse07_header">
+                                    <h5>
+                                        <a data-toggle="collapse" href="#collapse07" aria-expanded="true"
+                                           aria-controls="collapse07">
+                                            Chapter 5. Join the NoSQL movement
+                                        </a>
+                                    </h5>
+                                </div>
+
+                                <div id="collapse07" class="collapse show" role="tabpanel"
+                                     aria-labelledby="collapse07_header" data-parent="#accordion02">
+                                    <div class="card-body">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                5.1. Introduction to NoSQL
+                                            </li>
+                                            <li>
+                                                5.2. Case study: What disease is that?
+                                            </li>
+                                            <li>
+                                                5.3. Summary
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" role="tab" id="collapse08_header">
+                                    <h5>
+                                        <a class="collapsed" data-toggle="collapse" href="#collapse08"
+                                           aria-expanded="false" aria-controls="collapse08">
+                                            Chapter 6. The rise of graph databases
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapse08" class="collapse" role="tabpanel"
+                                     aria-labelledby="collapse08_header" data-parent="#accordion02">
+                                    <div class="card-body">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" role="tab" id="collapse09_header">
+                                    <h5>
+                                        <a class="collapsed" data-toggle="collapse" href="#collapse09"
+                                           aria-expanded="false" aria-controls="collapse09">
+                                            Chapter 7. Text mining and text analytics
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapse09" class="collapse" role="tabpanel"
+                                     aria-labelledby="collapse09_header" data-parent="#accordion02">
+                                    <div class="card-body">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" role="tab" id="collapse10_header">
+                                    <h5>
+                                        <a class="collapsed" data-toggle="collapse" href="#collapse10"
+                                           aria-expanded="false" aria-controls="collapse10">
+                                            Chapter 8. Data visualization to the end user
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapse10" class="collapse" role="tabpanel"
+                                     aria-labelledby="collapse10_header" data-parent="#accordion02">
+                                    <div class="card-body">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="chapter" class="ls s-overlay mobile-overlay s-py-90 s-py-xl-150 section-book">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 ml-auto">
+                        <div class="divider-xl-110"></div>
+                        <h3 class="special-heading">
+                            <span>Chapter 1. The beginning</span>
+                        </h3>
+                        <div class="divider-40"></div>
+                        <div class="scroll-block">
+                            <p class="first-letter">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua uenim ad minim veniam quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure
+                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                pariatur.
+                            </p>
+                            <p>
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit
+                                voluptatem accusantium doloremque laudantium. , totam rem aperiam, eaque ipsa quae
+                                ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
+                                quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                                sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam
+                                quaerat voluptatem.
+                            </p>
+                        </div>
+                        <div class="divider-xl-100"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ls ms s-overlay mobile-overlay s-py-90 s-py-xl-150 section-amazon">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="divider-xl-110"></div>
+                        <h3 class="special-heading">
+                            <span>50k+ people read the book. Get your copy now!</span>
+                        </h3>
+                        <div class="divider-40"></div>
+                        <p class="excerpt">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                            nulla pariatur sint occaecat cupidatat
+                        </p>
+                        <div class="divider-40"></div>
+                        <p>
+                            Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Sed ut perspiciatis unde aperiam, eaque ipsa quae ab illo inventore.
+                        </p>
+                        <div class="divider-40"></div>
+                        <div class="columns-two-left">
+                            <a href="contact.html" class="btn btn-darkgrey">Contact us</a>
+                            <a href="chapter.html" class="btn btn-outline-darkgrey">Get free chapter 1</a>
+                        </div>
+                        <div class="divider-xl-100"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="soon" class="ds s-pb-90 s-pt-60 s-py-xl-150 section-counter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div id="comingsoon-countdown"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="ls s-py-90 s-py-xl-160">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="mb-2 color-dark">Recent news</p>
+                        <h2 class="special-heading">
+                            <span>Our blogs</span>
+                        </h2>
+                        <div class="divider-60 divider-xl-70"></div>
+                        <div class="owl-carousel owl-nav-bottom" data-responsive-lg="3" data-responsive-md="2"
+                             data-responsive-sm="1" data-responsive-xs="1" data-nav="true" data-margin="60"
+                             data-loop="true" data-autoplay="true">
+                            <article
+                                    class="text-center post-grid-item post type-post status-publish format-standard has-post-thumbnail">
+                                <div class="item-media post-thumbnail">
+                                    <img src="images/gallery-square/17.jpg" alt="img">
+                                    <div class="media-links">
+                                        <a class="abs-link" href="blog-single-@@type.html"></a>
+                                    </div>
+                                    <p class="item-meta">
+                                        <span class="time-meta">March 31, 2020</span>
+                                    </p>
+                                </div><!-- .post-thumbnail -->
+                                <div class="item-content">
+                                    <header class="entry-header">
+                                        <h4 class="entry-title">
+                                            <a href="blog-single-@@type.html" rel="bookmark">
+                                                Lorem ipsum dolor sit consectetur
+                                            </a>
+                                        </h4>
+                                        <!-- .entry-meta -->
+                                    </header>
+                                </div><!-- .item-content -->
+                            </article><!-- #post-## -->
+                            <article
+                                    class="text-center post-grid-item post type-post status-publish format-standard has-post-thumbnail">
+                                <div class="item-media post-thumbnail">
+                                    <img src="images/gallery-square/01.jpg" alt="img">
+                                    <div class="media-links">
+                                        <a class="abs-link" href="blog-single-@@type.html"></a>
+                                    </div>
+                                    <p class="item-meta">
+                                        <span class="time-meta">March 27, 2020</span>
+                                    </p>
+                                </div><!-- .post-thumbnail -->
+                                <div class="item-content">
+                                    <header class="entry-header">
+                                        <h4 class="entry-title">
+                                            <a href="blog-single-@@type.html" rel="bookmark">
+                                                Adipisicing elit, sed do eiusmod tempor
+                                            </a>
+                                        </h4>
+                                    </header>
+                                    <!-- .entry-header -->
+                                </div><!-- .item-content -->
+                            </article><!-- #post-## -->
+                            <article
+                                    class="text-center post-grid-item post type-post status-publish format-standard has-post-thumbnail">
+                                <div class="item-media post-thumbnail">
+                                    <img src="images/gallery-square/03.jpg" alt="img">
+                                    <div class="media-links">
+                                        <a class="abs-link" href="blog-single-@@type.html"></a>
+                                    </div>
+                                    <p class="item-meta">
+                                        <span class="time-meta">March 20, 2020</span>
+                                    </p>
+                                </div><!-- .post-thumbnail -->
+                                <div class="item-content">
+                                    <header class="entry-header">
+                                        <h4 class="entry-title">
+                                            <a href="blog-single-@@type.html" rel="bookmark">
+                                                Incididunt ut labore et dolore magna
+                                            </a>
+                                        </h4>
+                                    </header>
+                                </div><!-- .item-content -->
+                            </article><!-- #post-## -->
+                            <article
+                                    class="text-center post-grid-item post type-post status-publish format-standard has-post-thumbnail">
+                                <div class="item-media post-thumbnail">
+                                    <img src="images/gallery-square/04.jpg" alt="img">
+                                    <div class="media-links">
+                                        <a class="abs-link" href="blog-single-@@type.html"></a>
+                                    </div>
+                                    <p class="item-meta">
+                                        <span class="time-meta">March 04, 2020</span>
+                                    </p>
+                                </div><!-- .post-thumbnail -->
+                                <div class="item-content">
+                                    <header class="entry-header">
+                                        <h4 class="entry-title">
+                                            <a href="blog-single-@@type.html" rel="bookmark">
+                                                Lorem ipsum dolor sit consectetur
+                                            </a>
+                                        </h4>
+                                    </header>
+                                </div><!-- .item-content -->
+                            </article><!-- #post-## -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mail" class="ls ms s-py-90 s-py-xl-160">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="divider-lg-60"></div>
+                        <h2 class="special-heading">
+                            <span>Get in touch</span>
+                        </h2>
+                        <div class="divider-35"></div>
+                        <ul class="pl-0">
+                            <li class="icon-inline">
+                                <div class="icon-styled color-main fs-16">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <p>(800)-398-7586 or (800)-398-7594</p>
+                            </li>
+                            contact
+                            <li class="icon-inline links-grey">
+                                <div class="icon-styled color-main fs-16">
+                                    <i class="fa fa-paper-plane-o"></i>
+                                </div>
+                                <p>
+                                    <a
+                                            th:href="@{/home}"><span
+                                            class="__cf_email__"
+                                            data-cfemail="d6babfb1bea2b4b9b9bd96a5a3a6a6b9a4a2f8b5b9bb">[email&#160;protected]</span></a>
+                                </p>
+                            </li>
+                            <li class="icon-inline">
+                                <div class="icon-styled color-main fs-16">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                                <p>3230 Hood Avenue, San Diego, CA 92128</p>
+                            </li>
+                        </ul>
+                        <div class="divider-35"></div>
+                        <p class="social-icons">
+                            <a th:href="@{https://www.facebook.com/}" class="fa border-icon rounded-icon fa-facebook"
+                               title="facebook"></a>
+                            <a href="@{https://twitter.com/}" class="fa border-icon rounded-icon fa-twitter"
+                               title="twitter"></a>
+                        </p>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="divider-lg-0 divider-60"></div>
+                        <div class="inner-wrap ls p-30 p-xl-70 border-r-def">
+                            <form class="contact-form c-mb-50 c-gutter-50" method="post" action="/">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group has-placeholder">
+                                            <label for="name">Full Name <span class="required">*</span></label>
+                                            <input type="text" aria-required="true" size="30" value="" name="name"
+                                                   id="name" class="form-control" placeholder="Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group has-placeholder">
+                                            <label for="email">Email address<span class="required">*</span></label>
+                                            <input type="email" aria-required="true" size="30" value="" name="email"
+                                                   id="email" class="form-control" placeholder="Email">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group has-placeholder">
+                                            <label for="subject">Subject<span class="required">*</span></label>
+                                            <input type="text" aria-required="true" size="30" value=""
+                                                   name="subject" id="subject" class="form-control"
+                                                   placeholder="Subject">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group has-placeholder">
+                                            <label for="message">Your message</label>
+                                            <textarea aria-required="true" rows="3" cols="45" name="message"
+                                                      id="message" class="form-control"
+                                                      placeholder="Message"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wrap-forms">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button type="submit" name="contact_submit"
+                                                    class="btn btn-maincolor">Send a message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--.col-* -->
+                </div>
+            </div>
+        </section>
+	</div>
+</body>
+
+</html>

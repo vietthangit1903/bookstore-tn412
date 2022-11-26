@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+      
+<head th:fragment="head">
+	<title>Lightbook - TN412</title>
+	<meta charset="utf-8">
+
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no">
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+	<link rel="stylesheet" th:href="@{/css/animations.css}">
+	<link rel="stylesheet" th:href="@{/css/font-awesome.css}">
+	<link rel="stylesheet" th:href="@{/css/themeicon.css}">
+	<link rel="stylesheet" th:href="@{/css/main.css}" class="color-switcher-link">
+	<link rel="stylesheet" th:href="@{/css/shop.css}" class="color-switcher-link">
+	<script th:src="@{/js/vendor/modernizr-2.6.2.min.js}"></script>
+    
+</head>
+
+<body>
+
+<header th:fragment="header" class="page_header ls s-overlay s-py-10">
+	<div class="container-fluid">
+		<div class="row align-items-center">
+			<div class="col-xl-2 col-lg-3 col-11">
+				<a th:href="@{/}" class="logo">
+					<img th:src="@{images/logo.png}" alt="img">
+				</a>
+			</div>
+			<div class="col-xl-8 col-lg-5 col-1">
+				<!-- main nav start -->
+				<nav class="top-nav">
+					<ul class="nav sf-menu">
+						<li class="active">
+							<a th:href="@{index.html}">Home</a>
+						</li>
+						<li>
+							<a th:href="@{shop.html}">Shop</a>
+						</li>
+						<li>
+							<a th:href="@{author.html}">Author</a>
+						</li>
+						<li>
+							<a th:href="@{contact.html}">Contact</a>
+						</li>
+						<li>
+							<a th:href="@{login.html}">Login</a>
+						</li>
+						<li>
+							<a th:href="@{register.html}">Register</a>
+						</li>
+						<li>
+							<a th:href="@{#}">Pages</a>
+							<ul>
+								<li>
+									<a th:href="@{account.html}">Account</a>
+								</li>
+
+								<li>
+									<a th:href="@{cart.html}">Cart</a>
+								</li>
+								<li>
+									<a th:href="@{checkout.html}">Checkout</a>
+								</li>
+								<li>
+									<a th:href="@{order-received.html}">Order Received</a>
+								</li>
+								<li>
+									<a th:href="@{404.html}">404</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<!-- end main nav -->
+			</div>
+			<div class="col-xl-2 col-lg-3 text-right d-none d-lg-block">
+				<a th:href="@{shop.html}" class="btn btn-maincolor">Purchase now</a>
+			</div>
+		</div>
+	</div>
+	<!-- header toggler -->
+	<span class="toggle_menu"><span></span></span>
+</header>
+
+<section class="page_title ds s-parallax s-py-110">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 text-center">
+				<h1 class="small-title">Shop Product Detail</h1>
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">
+						<a href="./">Home</a>
+					</li>
+					<li class="breadcrumb-item">
+						<a href="#">Shop</a>
+					</li>
+					<li class="breadcrumb-item active">
+						Shop Product Detail
+					</li>
+				</ol>
+			</div>
+
+		</div>
+	</div>
+</section>
+</body>
+</html>

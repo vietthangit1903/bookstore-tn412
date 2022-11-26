@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class CartDetail {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false, columnDefinition = "DECIMAL (8,2) UNSIGNED")

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>New or Edit</h1>
+    <hr />
+    <form th:action="@{/publisher/saveOrUpdate}"
+    method="post" th:object="${publisher}">
+        ID:
+        <input type="text" placeholder="ID" th:field="*{id}" readonly/>
+
+
+        <br/> <br/>
+        Name:
+        <input type="text" placeholder="Name" th:field="*{name}"/>
+        <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}" th:class="${#fields.hasErrors('name')}? error"></p>
+
+        <br/> <br/>
+        <input type="submit" value="Save" />
+
+        <ul><li th:each="error : ${#fields.allErrors()}" th:text="${error}"></li></ul>
+    </form>
+</body>
+</html>
