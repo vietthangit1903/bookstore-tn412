@@ -1,7 +1,11 @@
 package tn412.project.models;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.Set;
+import javax.persistence.Column;
 
 @Entity
 public class Publisher {
@@ -9,7 +13,10 @@ public class Publisher {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(columnDefinition = "nvarchar(50) not null")
+    @NotEmpty(message = "Tên không được rỗng")
+    @Length(max = 50, min = 5, message = "Độ dài từ 5 đến 50 ký tự")
+//    @Column(nullable = false)
     private String name;
 
     @OneToMany(mappedBy = "publisher")
