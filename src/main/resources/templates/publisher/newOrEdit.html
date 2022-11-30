@@ -1,27 +1,24 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    <h1>New or Edit</h1>
-    <hr />
-    <form th:action="@{/publisher/saveOrUpdate}"
-    method="post" th:object="${publisher}">
-        ID:
-        <input type="text" placeholder="ID" th:field="*{id}" readonly/>
+<head th:replace="/fragments/header :: head"></head>
+<body th:replace="master :: content(~{ :: .content})">
+    <div class="content">
+        <form th:action="@{/publisher/saveOrUpdate}" method="post" th:object="${publisher}">
+            <div class="card-header" style="text-align: center;">
+                <h2>Thêm sửa nhà xuất bản</h2>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="name">Tên NXB:</label>
+                    <input type="text" class="form-control" id="name" th:field="*{name}" aria-describedby="nameHid" placeholder="Tên">
+                    <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}" th:class="${#fields.hasErrors('name')}? error"></p>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+                <button class="btn btn-primary">Lưu</button>
+            </div>
+        </form>
+    </div>
 
-
-        <br/> <br/>
-        Name:
-        <input type="text" placeholder="Name" th:field="*{name}"/>
-        <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}" th:class="${#fields.hasErrors('name')}? error"></p>
-
-        <br/> <br/>
-        <input type="submit" value="Save" />
-
-        <ul><li th:each="error : ${#fields.allErrors()}" th:text="${error}"></li></ul>
-    </form>
 </body>
 </html>
