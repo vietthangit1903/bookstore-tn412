@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,16 +30,17 @@ public class AuthorController {
 	}
 	
 	@PostMapping("create")
-	public String addAuhors(Author author, Model model) {
+	public String addAuhors(@ModelAttribute("author") Author author, Model model) {
 		System.out.println(author.getName());
-		Author auth = authorRepository.findByName(author.getName());
-		if(auth != null) {
-			model.addAttribute("author",auth);
-			model.addAttribute("Error", new ResponseObject("Author name error", auth));
-			return "/author/create";
-		}
-		authorRepository.save(author);
-		return "redirect:/author/create";
+		return null;
+//		Author auth = authorRepository.findByName(author.getName());
+//		if(auth != null) {
+//			model.addAttribute("author",auth);
+//			model.addAttribute("Error", new ResponseObject("Author name error", auth));
+//			return "/author/create";
+//		}
+//		authorRepository.save(author);
+//		return "redirect:/author/list";
 	}
 	@GetMapping("edit/{id}")
 	public String editAuthor(Model  model, @PathVariable Long id) {
@@ -63,9 +65,9 @@ public class AuthorController {
 		authorRepository.delete(auth);
 		return "redirect:/author/list";
 	}
-	@GetMapping("list")
+	@GetMapping("/list")
 	public String list(Model model) {
 		model.addAttribute("listAuthor", authorRepository.findAll());
-		return "redirect:/author/list";
+		return "/author/list";
 	}
 }

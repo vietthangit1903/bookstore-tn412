@@ -42,7 +42,7 @@
 								<div class="woocommerce">
 									<div class="alert alert-info" th:if="${successMessage}" th:utext="${successMessage}"></div>
 
-									<form class="woocomerce-form woocommerce-form-login login" method="post" th:action="@{/auth/register}" th:object="${user}">
+									<form class="woocomerce-form woocommerce-form-login login" method="post" th:action="@{/register}" th:object="${user}">
 										<p
 											class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 											<label for="email">Email<span class="required">*</span>
