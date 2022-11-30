@@ -2036,7 +2036,7 @@ form.login {
 	background-color: #f2f2eb;
 	border-radius: 3px;
 	padding: 60px;
-	text-align: center;
+	text-align: left;
 }
 
 @media (min-width: 992px) {

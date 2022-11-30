@@ -18,7 +18,7 @@ public class UserDto {
             message="Password must contain UPPERCASE and lowercase letters, numbers, special characters, and at least 8 characters.")
     private String password;
     
-    @NotBlank(message = "Password is required")
+    @NotBlank(message = "Confirm password is required")
     @Pattern(regexp="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\\w\\s]).{8,}$",
             message="Password must contain UPPERCASE and lowercase letters, numbers, special characters, and at least 8 characters.")
     private String confirmPassword;

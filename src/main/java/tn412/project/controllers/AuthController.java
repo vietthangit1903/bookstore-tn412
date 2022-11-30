@@ -3,6 +3,9 @@ package tn412.project.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,7 +21,7 @@ import tn412.project.repositories.UserRepository;
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping("/auth")
+@RequestMapping("/")
 public class AuthController {
 
 	@Autowired
@@ -29,9 +32,13 @@ public class AuthController {
 
 	@GetMapping("/login")
     public String showLoginForm() {
-        return "/login";
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		if(authentication == null || authentication instanceof AnonymousAuthenticationToken)
+			return "/login";
+		return "redirect:/";
     }
 
+	
 
 	@GetMapping("/register")
 	public String showRegisterForm(Model model) {

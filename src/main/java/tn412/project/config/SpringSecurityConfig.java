@@ -39,7 +39,7 @@ public class SpringSecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeRequests().antMatchers("/account").authenticated()
                 .anyRequest().permitAll()
-                .and().formLogin().loginPage("/auth/login")
+                .and().formLogin().loginPage("/login")
                 .usernameParameter("email")
                 .defaultSuccessUrl("/account").permitAll()
                 .and()
