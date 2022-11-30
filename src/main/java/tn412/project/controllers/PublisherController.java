@@ -57,16 +57,7 @@ public class PublisherController {
 //        return "publisher/list";
 //    }
 
-//    @GetMapping("sort")
-//    public String sort(ModelMap models, @RequestParam Optional<String> message, @SortDefault(sort = "name", direction = Sort.Direction.ASC) Sort sort){
-//        Iterable<Publisher> list = publisherRepository.findAll(sort);
 //
-//        if (message.isPresent()){
-//            models.addAttribute("message", message.get());
-//        }
-//        models.addAttribute("publisher", list);
-//        return "publisher/sort";
-//    }
 
     @GetMapping("paginate")
     public String paginate(ModelMap models, @RequestParam Optional<String> message, @PageableDefault(size = 5, sort = "name", direction = Sort.Direction.ASC)Pageable pageable){
