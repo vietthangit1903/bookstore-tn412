@@ -46,12 +46,14 @@
 							<li>
 								<a th:href="@{contact.html}">Contact</a>
 							</li>
-							
-							<li>
+							<li sec:authorize="isAnonymous()">
 								<a th:href="@{/login}">Login</a>
 							</li>
-							<li>
+							<li sec:authorize="isAnonymous()">
 								<a th:href="@{/register}">Register</a>
+							</li>
+							<li sec:authorize="isAuthenticated()">
+								<a th:href="@{/account}">Hello <span sec:authentication="name"></span></a>
 							</li>
 							<li>
 								<a th:href="@{#}">Pages</a>
