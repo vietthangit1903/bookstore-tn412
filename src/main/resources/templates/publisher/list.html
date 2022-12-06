@@ -1,32 +1,63 @@
-<!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    <h1>List of Publisher</h1>
-    <hr />
-    <a th:href="@{/publisher/newOrEdit}">New Publisher</a>
-    <hr />
-    <div th:if="${message != null}">
-        <h3 th:text="${message}"></h3>
-    </div>
-    <table>
-        <tr>
-            <td>ID</td>
-            <td>Name</td>
-            <td></td>
-        </tr>
-        <tr th:each="item : ${publisher}">
-            <td th:text="${item.id}"></td>
-            <td th:text="${item.name}"></td>
-            <td>
-                <a th:href="@{'/publisher/newOrEdit/' + ${item.id}}">Edit</a>
-                <a th:href="@{'/publisher/delete/' + ${item.id}}">Delete</a>
-            </td>
-        </tr>
-    </table>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 
+<head th:replace="/fragments/header :: head"></head>
+
+
+<body th:replace="master :: content(~{ :: .content})">
+    <div class="content">
+        <!-- Breadcrumb -->
+        <section class="page_title ds s-parallax s-py-110">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12 text-center">
+                        <h1 class="small-title">Publisher List</h1>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="./">Home</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="#">Shop</a>
+                            </li>
+                            <li class="breadcrumb-item active">
+                                Publisher List
+                            </li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Breadcrumb -->
+
+        <!-- Content section -->
+        <div class="row justify-content-center my-3">
+            <div class="col-lg-10 col-md-10 col-sm-12">
+                <a th:href="@{/publisher/newOrEdit }" class=" btn btn-maincolor">Add new publisher</a>
+                <table class="shop_table shop_table_responsive cart">
+                    <thead>
+                        <tr>
+                            <th class="product-remove">&nbsp;</th>
+                            <th class="product-thumbnail">Id</th>
+                            <th class="product-name">Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="item : ${publisher}" class="cart_item">
+                            <td class="product-remove">
+                                <a th:href="@{'/publisher/newOrEdit/' + ${item.id}}">Edit</a>
+                                <a th:href="@{'/publisher/delete/' + ${item.id}}">Delete</a>
+                            </td>
+                            <td th:text="${item.id}"></td>
+                            <td th:text="${item.name}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- End Content section -->
+    </div>
 </body>
+
 </html>
