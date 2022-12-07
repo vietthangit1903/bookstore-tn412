@@ -40,13 +40,15 @@
 										<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 											<label for="authorName">Author Name</label>
 											<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" 
-											 name="authorName" id="authorname"  th:value="${author.name}?${author.name}:null" >
-											 
+											 name="name" id="authorname"  th:value="${author.name}?${author.name}:null" >
 										</p>
+
 										<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 											<label for="node">Information details of author</label>
-											<textarea class="woocommerce-Input woocommerce-Input--text input-text" name="description" ></textarea>
+											<textarea class="woocommerce-Input woocommerce-Input--text input-text" 
+											name="description" ></textarea>
 										</p>	
+
 										<p class="form-row">
 											<button type="submit" class="btn btn-primary btn-block">
 	            								Add

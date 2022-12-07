@@ -1,6 +1,5 @@
 package tn412.project.controllers;
 
-import org.hibernate.validator.cfg.defs.Mod11CheckDef;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,50 +21,55 @@ public class AuthorController {
 	
 	@GetMapping("create")
 	public String addAuthor(Model model) {
-		Author author = new Author();
-		model.addAttribute("author", author);
-		model.addAttribute("Error", new ResponseObject("", author));
+		Author tacgia = new Author();
+		model.addAttribute("author", tacgia);
+		model.addAttribute("Error", new ResponseObject("", tacgia));
 		
 		return "/author/create";
 	}
 	
 	@PostMapping("create")
-	public String addAuhors(@ModelAttribute("author") Author author, Model model) {
-		System.out.println(author.getName());
-		return null;
-//		Author auth = authorRepository.findByName(author.getName());
-//		if(auth != null) {
-//			model.addAttribute("author",auth);
-//			model.addAttribute("Error", new ResponseObject("Author name error", auth));
-//			return "/author/create";
-//		}
-//		authorRepository.save(author);
-//		return "redirect:/author/list";
+	public String addAuhors(@ModelAttribute("author") Author tacgia, Model model) {
+		System.out.println(tacgia.getName());
+		Author tgia = authorRepository.findByName(tacgia.getName());
+		if(tgia != null) {
+			model.addAttribute("author", tgia);
+			model.addAttribute("Error", new ResponseObject("Author name error", tgia));
+			return "/author/create";
+		}
+		authorRepository.save(tacgia);
+		return "redirect:/author/create";
 	}
+
 	@GetMapping("edit/{id}")
 	public String editAuthor(Model  model, @PathVariable Long id) {
-		Author author = authorRepository.findById(id).orElseThrow();
-		if(author != null) {
-			model.addAttribute("author", author);
-			model.addAttribute("Error", new ResponseObject("", author));
+		Author tacgia = authorRepository.findById(id).orElseThrow();
+		if(tacgia != null) {
+			model.addAttribute("author", tacgia);
+			model.addAttribute("Error", new ResponseObject("", tacgia));
 			return "/author/edit";
 		}
 		return "/author/list";
 	}
-	@PostMapping("edit{id}")
-	public String editAuthors(Model  model, @PathVariable Long id, Author author) {
-		Author auth = authorRepository.findById(id).orElseThrow();
-		auth.setName(auth.getName());
-		authorRepository.save(auth);
+
+	@PostMapping("edit/{id}")
+	public String editAuthors(Author author, @PathVariable Long id, Model  model) {
+		Author tgia = authorRepository.findById(id).orElseThrow();
+		tgia.setName(author.getName());
+		authorRepository.save(tgia);
+
 		return "redirect:/author/list";
 	}
-	@GetMapping("delete{id}")
+
+	@GetMapping("delete/{id}")
 	public String deleteAuthor(@PathVariable Long id) {
-		Author auth = authorRepository.findById(id).orElseThrow();
-		authorRepository.delete(auth);
+		Author tgia = authorRepository.findById(id).orElseThrow();
+		authorRepository.delete(tgia);
+
 		return "redirect:/author/list";
 	}
-	@GetMapping("/list")
+
+	@GetMapping("list")
 	public String list(Model model) {
 		model.addAttribute("listAuthor", authorRepository.findAll());
 		return "/author/list";

@@ -34,18 +34,18 @@
 						<article>
 							<div class="entry-content">
 								<div class="woocommerce">
-									<form class="woocomerce-form woocommerce-form-login login" method="post" 
-									th:action="@{/author/edit/} + ${Author.id}" th:object="${author}">
+									<form class="woocomerce-form woocommerce-form-login login" th:object="${author}" method="post" 
+									th:action="@{/author/edit/} + ${author.id}" >
 										<h3 class="a-h2 align-items-start" style="margin-top:20px ;">Edit authors </h3>
 										<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 											<label for="name">Author Name</label>
 											<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" 
-											name="authorname" id="authorname" th:field="*{name}" value="${author.name}?${author.name}:null">
-											<label th:text="${Error.message}?${Error.message}:null"></label>
+											name="name" id="authorname" th:field="*{name}" value="${author.name}?${author.name}:null">
 										</p>
+										
 										<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 											<label for="node">Information details of author</label>
-											<textarea class="woocommerce-Input woocommerce-Input--text input-text">
+											<textarea class="woocommerce-Input woocommerce-Input--text input-text" name="description" th:text="${author.description}?${author.description}:null"></textarea>
 										</p>	
 										<p class="form-row">
 											<button type="submit" class="btn btn-primary btn-block">
