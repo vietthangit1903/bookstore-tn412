@@ -1390,7 +1390,7 @@ input[type="radio"]:disabled + label:before {
 	padding: 0 40px 12px 0;
 }
 
-.select_container::after {
+/* .select_container::after {
 	color: #ff5740;
 	content: "\f107";
 	font-family: "FontAwesome", sans-serif;
@@ -1399,7 +1399,7 @@ input[type="radio"]:disabled + label:before {
 	position: absolute;
 	right: 20px;
 	top: 0;
-}
+} */
 
 .select_container::before {
 	background-color: #031521;

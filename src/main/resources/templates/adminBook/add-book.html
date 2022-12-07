@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head th:replace="/fragments/header :: head"></head>
+
+
+<body th:replace="master :: content(~{ :: .content})">
+	<div class="content">
+		<!-- Breadcrumb -->
+		<section class="page_title ds s-parallax s-py-110">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-12 text-center">
+						<h1 class="small-title">Add new book</h1>
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item">
+								<a href="./">Home</a>
+							</li>
+							<li class="breadcrumb-item">
+								<a href="#">Shop</a>
+							</li>
+							<li class="breadcrumb-item active">
+								Add new book
+							</li>
+						</ol>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- End Breadcrumb -->
+
+		<!-- Content section -->
+		<section class="ls s-py-90 s-py-xl-160">
+			<div class="container">
+				<div class="row justify-content-center ">
+					<main class="col-lg-10 p-25 bg-light">
+						<div class="alert alert-success alert-dismissible fade show" role="alert" th:if="${successMessage}">
+							<span th:text="${successMessage}"></span>
+							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+						</div>
+						<form th:action="@{/admin/book/add-book}" th:object="${book}" method="POST" enctype="multipart/form-data">
+							<div class="mb-3">
+								<select th:field="*{category}" class="form-select" id="category">
+									<option th:value="null" selected>Choose book category </option>
+
+									<option th:each="category : ${categories}" th:value="${category.id}"
+										th:text="${category.name}"></option>
+								</select>
+							</div>
+							<div class="mb-3">
+								<select th:field="*{author}" class="form-select" id="author">
+									<option th:value="null" selected>Choose book author</option>
+									<option th:each="author : ${authors}" th:value="${author.id}" th:text="${author.name}">
+									</option>
+								</select>
+							</div>
+							<div class="mb-3">
+								<label for="name" class="form-label">Book name</label>
+								<input type="text" class="form-control" id="name" th:field="*{name}">
+							</div>
+							<div class="mb-3">
+								<label for="description" class="form-label">Book description</label>
+								<textarea th:field="*{description}" class="form-control" id="description"
+									rows="3"></textarea>
+							</div>
+							<div class="mb-3">
+								<label for="price" class="form-label">Book price</label>
+								<input th:field="*{price}" type="number" class="form-control" id="price" min="0"
+									max="100" placeholder="Book price">
+							</div>
+							<div class="mb-3">
+								<label for="stock" class="form-label">Book stock</label>
+								<input th:field="*{stock}" type="number" class="form-control" id="stock" min="0"
+									max="100" placeholder="Book stock">
+							</div>
+							<div class="mb-3">
+								<select th:field="*{publisher}" class="form-select" id="publisher">
+									<option th:value="null" selected>Choose book publisher</option>
+									<option th:each="publisher : ${publishers}" th:value="${publisher.id}"
+										th:text="${publisher.name}"></option>
+
+								</select>
+							</div>
+							<div class="mb-3">
+								<label for="publish-date" class="form-label">Book publish date</label>
+								<input th:field="*{publishDate}" type="date" class="form-control" id="publish-date"
+									min="0" max="100" placeholder="Book publish date">
+							</div>
+							<div class="mb-3">
+								<label for="image">Choose book image</label>
+								<input th:field="*{image}" type="file" class="form-control" id="image"
+									placeholder="Book image" accept="image/png, image/jpeg">
+							</div>
+
+							<!-- <div class="d-flex flex-wrap">
+                                <div class="mr-3 mb-3 p-2 border border-dark">
+                                    <img width="180" height="180" src="images/shop/01.jpg" class="" alt="img">
+                                    <a href="#" class="removeImage bg-dark p-3" title="Delete image">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </a>
+                                </div>
+                                <div class="mr-3 mb-3 p-2 border border-dark">
+                                    <img width="180" height="180" src="images/shop/01.jpg" class="" alt="img">
+                                    <a href="#" class="removeImage bg-dark p-3" title="Delete image">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </a>
+                                </div>
+                            </div> -->
+							<button type="submit" class="btn btn-maincolor">Add new book</button>
+
+
+						</form>
+					</main>
+				</div>
+			</div>
+		</section>
+		<!-- End Content section -->
+	</div>
+</body>
+
+</html>

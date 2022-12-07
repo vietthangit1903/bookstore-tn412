@@ -1492,7 +1492,8 @@ function windowLoadInit() {
 			});
 		};
 
-		quantity_init();
+		if(window.location.href.includes("cart"))
+			quantity_init();
 		updateCard();
 
 		$body.on('updated_cart_totals', function (e) {
