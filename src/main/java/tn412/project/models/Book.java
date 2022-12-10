@@ -142,4 +142,10 @@ public class Book {
     public void setImage(String image) {
         this.image = image;
     }
+    
+    @Transient
+    public String getBookImagePath() {
+    	if(image == null || id == null) return null;
+    	return "/book-images/" + id + "/" + image;
+    }
 }
