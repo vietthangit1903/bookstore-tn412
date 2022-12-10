@@ -40,36 +40,17 @@
                                 <figure>
                                     <div data-thumb="images/books/03.jpg">
                                         <a href="images/books/03.jpg">
-                                            <img src="images/books/03.jpg" alt="img" data-caption="" data-src="images/books/03.jpg" data-large_image="images/books/03.jpg" data-large_image_width="1000" data-large_image_height="1000">
+                                            <img th:src="@{${book.bookImagePath}}" alt="img" style="width: 400px; height: 600px; object-fit: contain;" >
                                         </a>
                                     </div>
-                                    <div data-thumb="images/books/02.jpg">
-                                        <a href="images/books/02.jpg">
-                                            <img src="images/books/02.jpg" alt="img" data-caption="" data-src="images/books/02.jpg" data-large_image="images/books/02.jpg" data-large_image_width="1000" data-large_image_height="1000">
-                                        </a>
-                                    </div>
-                                    <div data-thumb="images/books/04.jpg">
-                                        <a href="images/books/04.jpg">
-                                            <img src="images/books/04.jpg" alt="img" data-caption="" data-src="images/books/04.jpg" data-large_image="images/books/04.jpg" data-large_image_width="1000" data-large_image_height="1000">
-                                        </a>
-                                    </div>
-                                    <div data-thumb="images/books/05.jpg">
-                                        <a href="images/books/05.jpg">
-                                            <img src="images/books/05.jpg" alt="img" data-caption="" data-src="images/books/05.jpg" data-large_image="images/books/05.jpg" data-large_image_width="1000" data-large_image_height="1000">
-                                        </a>
-                                    </div>
-                                    <div data-thumb="images/books/06.jpg">
-                                        <a href="images/books/06.jpg">
-                                            <img src="images/books/06.jpg" alt="img" data-caption="" data-src="images/books/06.jpg" data-large_image="images/books/06.jpg" data-large_image_width="1000" data-large_image_height="1000">
-                                        </a>
-                                    </div>
+                                    
 
                                 </figure>
                             </div>
 
                             <div class="summary entry-summary">
 
-                                <h1 class="product_title entry-title">Ship Your Idea</h1>
+                                <h1 th:text="${book.name}"></h1>
                                 <div class="price-wrap">
                                     <div class="woocommerce-product-rating">
                                         <div class="star-rating">
@@ -80,14 +61,12 @@
                                     </div>
                                     <p class="price">
                                         <span>
-                                            <span>$</span>20.00
+                                            <span>$[[${book.price}]]</span>
                                         </span>
                                     </p>
                                 </div>
                                 <div>
-                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
-                                        tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-                                        semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                    <p>[[${book.description}]]</p>
                                 </div>
 
                                 <form>
@@ -139,11 +118,8 @@
                                 </form>
 
                                 <div class="product_meta">
-                                    <span class="sku_wrapper">SKU: <span class="sku">N/A</span>
-                                    </span>
-                                    <span class="posted_in">Categories: <a href="shop.html" rel="tag">Clothing</a>, <a href="shop.html" rel="tag">T-shirts</a>
-                                    </span>
-                                    <span class="tagged_as">Tag: <a href="shop.html" rel="tag">premium</a></span>
+                                    <span >Publisher: <span>[[${book.publisher.name}]]</span><br
+                                    <span >Publish date: <span>[[${book.publishDate}]]</span>
                                 </div>
                                 <div class="social-icons">
                                     <a href="https://www.facebook.com/" class="fa border-icon rounded-icon fa-facebook" title="facebook"></a>
