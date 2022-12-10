@@ -12,7 +12,7 @@
 				<div class="row">
 
 					<div class="col-md-12 text-center">
-						<h1 class="small-title">Add new book</h1>
+						<h1 class="small-title">[[${pageTitle}]]</h1>
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item">
 								<a href="./">Home</a>
@@ -21,7 +21,7 @@
 								<a href="#">Shop</a>
 							</li>
 							<li class="breadcrumb-item active">
-								Add new book
+								[[${pageTitle}]]
 							</li>
 						</ol>
 					</div>
@@ -36,11 +36,15 @@
 			<div class="container">
 				<div class="row justify-content-center ">
 					<main class="col-lg-10 p-25 bg-light">
-						<div class="alert alert-success alert-dismissible fade show" role="alert" th:if="${successMessage}">
+						<div class="alert alert-success alert-dismissible fade show" role="alert"
+							th:if="${successMessage}">
 							<span th:text="${successMessage}"></span>
 							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 						</div>
-						<form th:action="@{/admin/book/add-book}" th:object="${book}" method="POST" enctype="multipart/form-data">
+
+						<form th:action="@{/admin/book} + (${book.id} ? '/update' : '/add-book' )" th:object="${book}"
+							method="POST" enctype="multipart/form-data">
+							<input type="hidden" th:field="*{id}">
 							<div class="mb-3">
 								<select th:field="*{category}" class="form-select" id="category">
 									<option th:value="null" selected>Choose book category </option>
@@ -52,7 +56,8 @@
 							<div class="mb-3">
 								<select th:field="*{author}" class="form-select" id="author">
 									<option th:value="null" selected>Choose book author</option>
-									<option th:each="author : ${authors}" th:value="${author.id}" th:text="${author.name}">
+									<option th:each="author : ${authors}" th:value="${author.id}"
+										th:text="${author.name}">
 									</option>
 								</select>
 							</div>
@@ -88,26 +93,19 @@
 								<input th:field="*{publishDate}" type="date" class="form-control" id="publish-date"
 									min="0" max="100" placeholder="Book publish date">
 							</div>
-							<div class="mb-3">
+							<div class="mb-3" th:if="!${book.id}">
 								<label for="image">Choose book image</label>
-								<input th:field="*{image}" type="file" class="form-control" id="image"
-									placeholder="Book image" accept="image/png, image/jpeg">
+								<input name="image" type="file" class="form-control" id="image" placeholder="Book image"
+									accept="image/png, image/jpeg">
 							</div>
 
-							<!-- <div class="d-flex flex-wrap">
-                                <div class="mr-3 mb-3 p-2 border border-dark">
-                                    <img width="180" height="180" src="images/shop/01.jpg" class="" alt="img">
-                                    <a href="#" class="removeImage bg-dark p-3" title="Delete image">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </a>
-                                </div>
-                                <div class="mr-3 mb-3 p-2 border border-dark">
-                                    <img width="180" height="180" src="images/shop/01.jpg" class="" alt="img">
-                                    <a href="#" class="removeImage bg-dark p-3" title="Delete image">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </a>
-                                </div>
-                            </div> -->
+							<input th:if="${book.id}" name="image" type="hidden" th:value="${book.image}">
+
+							<div class="d-flex flex-wrap" th:if="${book.image}">
+								<div class="mr-3 mb-3 p-2 border border-dark">
+									<img width="180" height="180" th:src="@{${book.bookImagePath}}" class="" alt="img">
+								</div>
+							</div>
 							<button type="submit" class="btn btn-maincolor">Add new book</button>
 
 
