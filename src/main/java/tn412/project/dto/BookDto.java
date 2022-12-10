@@ -1,12 +1,6 @@
 package tn412.project.dto;
 
-import java.util.Date;
-
 import javax.validation.constraints.NotBlank;
-
-import tn412.project.models.Author;
-import tn412.project.models.Category;
-import tn412.project.models.Publisher;
 
 public class BookDto {
 

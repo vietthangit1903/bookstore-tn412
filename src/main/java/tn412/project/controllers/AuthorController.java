@@ -38,7 +38,7 @@ public class AuthorController {
 			return "/author/create";
 		}
 		authorRepository.save(tacgia);
-		return "redirect:/author/create";
+		return "redirect:/author/list";
 	}
 
 	@GetMapping("edit/{id}")
