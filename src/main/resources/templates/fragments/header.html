@@ -38,13 +38,13 @@
 								<a th:href="@{/}">Home</a>
 							</li>
 							<li>
-								<a th:href="@{shop.html}">Shop</a>
+								<a th:href="@{/shop}">Shop</a>
 							</li>
 							<li>
-								<a th:href="@{author.html}">Author</a>
+								<a th:href="@{/author}">Author</a>
 							</li>
 							<li>
-								<a th:href="@{contact.html}">Contact</a>
+								<a th:href="@{/contact}">Contact</a>
 							</li>
 							<li sec:authorize="isAnonymous()">
 								<a th:href="@{/login}">Login</a>
@@ -59,20 +59,20 @@
 								<a th:href="@{#}">Pages</a>
 								<ul>
 									<li>
-										<a th:href="@{account.html}">Account</a>
+										<a th:href="@{/account}">Account</a>
 									</li>
 
 									<li>
-										<a th:href="@{cart.html}">Cart</a>
+										<a th:href="@{/cart}">Cart</a>
 									</li>
 									<li>
-										<a th:href="@{checkout.html}">Checkout</a>
+										<a th:href="@{/checkout}">Checkout</a>
 									</li>
 									<li>
-										<a th:href="@{order-received.html}">Order Received</a>
+										<a th:href="@{/book-detail}">Order Received</a>
 									</li>
 									<li>
-										<a th:href="@{404.html}">404</a>
+										<a th:href="@{/404}">404</a>
 									</li>
 								</ul>
 							</li>

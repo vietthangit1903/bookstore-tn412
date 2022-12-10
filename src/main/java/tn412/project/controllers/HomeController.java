@@ -17,6 +17,25 @@ public class HomeController {
         return "/account";
     }
 
+    @GetMapping("/shop")
+    public String getShop(){
+        return "/shop";
+    }
 
-
+    @GetMapping("/author")
+    public String getAuthor(){
+        return "/author";
+    }
+    @GetMapping("/checkout")
+    public String getCheckout(){
+        return "/checkout";
+    }
+    @GetMapping("/book-detail")
+    public String getBookDetail(){
+        return "/book-detail";
+    }
+    @GetMapping("/cart")
+    public String getCart(){
+        return "/cart";
+    }
 }
