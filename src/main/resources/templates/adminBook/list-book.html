@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head th:replace="/fragments/header :: head"></head>
+
+
+<body th:replace="master :: content(~{ :: .content})">
+    <div class="content">
+        <!-- Breadcrumb -->
+        <section class="page_title ds s-parallax s-py-110">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12 text-center">
+                        <h1 class="small-title">Book list</h1>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="./">Home</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="#">Shop</a>
+                            </li>
+                            <li class="breadcrumb-item active">
+                                Book list
+                            </li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Breadcrumb -->
+
+        <!-- Content section -->
+        <div class="row justify-content-center my-3">
+            <div class="col-lg-10 col-md-10 col-sm-12">
+                <a th:href="@{/admin/book/add-book}" class="btn btn-maincolor">Add new book</a>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert" th:if="${errorMessage}">
+                    <span th:text="${errorMessage}"></span>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <table class="shop_table shop_table_responsive cart">
+                    <thead>
+                        <tr>
+                            <th class="product-remove">&nbsp;</th>
+                            <th class="product-thumbnail">Image</th>
+                            <th class="product-name">Book name</th>
+                            <th class="product-price">Price</th>
+                            <th class="product-stock">Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr class="cart_item" th:each=" book : ${books}">
+
+                            <td class="product-remove">
+                                <a th:href="@{'/admin/book/edit/' + ${book.id}}">Edit</a>
+                                <a th:href="@{'/admin/book/delete/' + ${book.id}}">Delete</a>
+                            </td>
+
+                            <td class="product-thumbnail">
+                                <a href="#">
+                                    <img width="180" height="180" th:src="@{${book.bookImagePath}}" class="" alt="img">
+                                </a>
+                            </td>
+
+                            <td class="product-name" data-title="Product" th:text="${book.name}">
+
+                            </td>
+
+                            <td class="product-price" data-title="Price">
+                                <span class="amount">
+                                    <span>$</span>[[${book.price}]]
+                                </span>
+                            </td>
+
+                            <td class="product-name" data-title="Stock" th:text="${book.stock}">
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- End Content section -->
+    </div>
+</body>
+
+</html>

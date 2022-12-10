@@ -25,7 +25,7 @@ public class Book {
     private int stock;
 
     @Column(nullable = false, columnDefinition = "DATE")
-    private Date publishDate;
+    private String publishDate;
 
     @Column(nullable = false)
     private String image;
@@ -51,7 +51,7 @@ public class Book {
     public Book() {
     }
 
-    public Book(String name, String description, double price, int stock, Date publishDate, String image, Author author, Category category, Publisher publisher) {
+    public Book(String name, String description, double price, int stock, String publishDate, String image, Author author, Category category, Publisher publisher) {
         this.name = name;
         this.description = description;
         this.price = price;
@@ -103,11 +103,11 @@ public class Book {
         this.stock = stock;
     }
 
-    public Date getPublishDate() {
+    public String getPublishDate() {
         return publishDate;
     }
 
-    public void setPublishDate(Date publishDate) {
+    public void setPublishDate(String publishDate) {
         this.publishDate = publishDate;
     }
 

@@ -10,4 +10,6 @@ import java.util.Optional;
 @Repository
 public interface BookRepository extends JpaRepository<Book, Long> {
     Optional<Book> findById(Long id);
+    
+    public Long countById(Long id);
 }
