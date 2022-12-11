@@ -48,22 +48,27 @@
 							</li>
 							<li sec:authorize="isAuthenticated()">
 								<a th:href="@{/account}">Hello <span sec:authentication="name"></span></a>
+								<ul>
+									<li>
+										<a th:href="@{/logout}">Log out</a>
+									</li>
+								</ul>
 							</li>
 							<li>
 								<a th:href="@{#}">Pages</a>
 								<ul>
 									<li>
-										<a th:href="@{/account}">Account</a>
+										<a th:href="@{/category/danhsach}">Category List</a>
 									</li>
 
 									<li>
-										<a th:href="@{/cart}">Cart</a>
+										<a th:href="@{/publisher}">Publisher List</a>
 									</li>
 									<li>
-										<a th:href="@{/checkout}">Checkout</a>
+										<a th:href="@{/author/list}">Author list</a>
 									</li>
 									<li>
-										<a th:href="@{/book-detail}">Order Received</a>
+										<a th:href="@{/admin/book/list}">Book list (Admin)</a>
 									</li>
 									<li>
 										<a th:href="@{/404}">404</a>

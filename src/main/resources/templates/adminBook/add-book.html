@@ -106,7 +106,7 @@
 									<img width="180" height="180" th:src="@{${book.bookImagePath}}" class="" alt="img">
 								</div>
 							</div>
-							<button type="submit" class="btn btn-maincolor">Add new book</button>
+							<button type="submit" class="btn btn-maincolor" th:text="(!${book.id}) ? 'Add new book' : 'Update book'"></button>
 
 
 						</form>
